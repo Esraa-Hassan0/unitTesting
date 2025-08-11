@@ -14,6 +14,9 @@ public class StopWatch {
     }
 
     public void record(int minutes) {
+        if (minutes < 0) {
+            return;
+        }
         this.minutes += minutes;
         if (minutes >= 60) {
             minutes -= 60;
