@@ -22,5 +22,21 @@ public class StopWatchTest {
         assertEquals(0, sw.getMinutes());
     }
 
+    @Test
+    public void testMinutesRollOverToHours() {
+        StopWatch sw = new StopWatch(8);
+        sw.record(60);
+        assertEquals(0, sw.getMinutes());
+        assertEquals(1, sw.getHours());
+    }
+
+    @Test
+    public void testHoursRollOverToDays() {
+        StopWatch sw = new StopWatch(8);
+        sw.record(8 * 60); // 8 hours worth of minutes
+        assertEquals(0, sw.getMinutes());
+        assertEquals(0, sw.getHours());
+        assertEquals(1, sw.getDays());
+    }
 
 }
