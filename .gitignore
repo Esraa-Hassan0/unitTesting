@@ -3,6 +3,7 @@
 !.idea/codeStyles
 !.idea/runConfigurations
 *.iml
+.idea
 
 # Ignore build output
 out/
