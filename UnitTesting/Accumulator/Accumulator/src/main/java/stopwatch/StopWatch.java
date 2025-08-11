@@ -18,8 +18,8 @@ public class StopWatch {
             return;
         }
         this.minutes += minutes;
-        if (minutes >= 60) {
-            minutes -= 60;
+        if (this.minutes >= 60) {
+            this.minutes -= 60;
             hours++;
         }
         if (hours >= workingHoursPerDay) {
