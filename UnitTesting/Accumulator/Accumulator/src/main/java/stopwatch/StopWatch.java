@@ -19,12 +19,12 @@ public class StopWatch {
         }
         this.minutes += minutes;
         if (this.minutes >= 60) {
-            this.minutes -= 60;
-            hours++;
+            hours += (this.minutes / 60);
+            this.minutes %= 60;
         }
         if (hours >= workingHoursPerDay) {
-            hours -= workingHoursPerDay;
-            days++;
+            days += (hours / workingHoursPerDay);
+            hours %= workingHoursPerDay;
         }
 
     }
