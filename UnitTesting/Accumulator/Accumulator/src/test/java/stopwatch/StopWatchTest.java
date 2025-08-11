@@ -39,4 +39,12 @@ public class StopWatchTest {
         assertEquals(1, sw.getDays());
     }
 
+    @Test
+    public void testMultipleDayIncrement() {
+        StopWatch sw = new StopWatch(8);
+        sw.record(16 * 60); // 16 hours = 2 days for 8h/day
+        assertEquals(0, sw.getMinutes());
+        assertEquals(0, sw.getHours());
+        assertEquals(2, sw.getDays());
+    }
 }

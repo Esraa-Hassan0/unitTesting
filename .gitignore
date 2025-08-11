@@ -1,0 +1,8 @@
+# Ignore IntelliJ project files
+.idea/*
+!.idea/codeStyles
+!.idea/runConfigurations
+*.iml
+
+# Ignore build output
+out/
